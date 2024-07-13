@@ -33,7 +33,7 @@ int httpGetRequest( int sockfd , struct uri *uri01 ){
 	char getReqStrBuf[300] = {0};
 	char *getReqStr = getReqStrBuf;
 	sprintf ( getReqStr , 
-			"GET %s HTTP/1.1\r\nHost: %s\r\nContent-Type: text/plain\r\n\r\n" , 
+			"GET %s HTTP/1.1\r\nHost: %s\r\n\r\n" , 
 			uri01->path , 
 			uri01->host 
 			);
@@ -49,7 +49,7 @@ int httpGetRequest( int sockfd , struct uri *uri01 ){
 
 	// send() the get request
 	// test
-	//char *testGetStr = "GET / HTTP/1.1\r\nHost: example.com\r\nContent-Type: text/plain\r\n\r\n";
+	//char *testGetStr = "GET / HTTP/1.1\r\nHost: example.com\r\n\r\n";
 	//getStrLen = strlen ( testGetStr ) ; printf("len: %d\n" , getStrLen );
 	//ret = send ( sockfd , testGetStr , getStrLen , 0 );
 	
